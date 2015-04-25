@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$(".top_wrapper .top_text h1").fitText(1.4, { minFontSize: '20', maxFontSize: '36' });
+
 	$("#portfolio_grid").mixItUp();
 
 	$(".s_portfolio li").click(function() {
@@ -7,7 +9,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 	});
 
-	$(".top_wrapper .top_text h1").fitText(1.5, { minFontSize: '2px', maxFontSize: '36px' });
+	
 	$(".popup").magnificPopup({type:"image"});
 	$(".popup_content").magnificPopup({
 		type:"inline",

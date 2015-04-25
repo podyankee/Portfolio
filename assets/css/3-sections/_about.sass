@@ -1,0 +1,27 @@
+section
+	padding: 70px 0 80
+	
+	h2
+		text-align: center
+		font-size: 24px
+		text-transform: uppercase
+		margin: 0 0 15px
+
+.s_descr_wrap
+	text-align: center
+
+	.s_descr
+		display: inline-block
+		+kerning(5)
+		position: relative
+		margin-bottom: 130px
+		&::after
+			content: ""
+			width: 150px
+			height: 1px
+			background-color: $main_color
+			position: absolute
+			left: 50%
+			margin-left: -75px
+			margin-top: 60px
+			
