@@ -7,11 +7,14 @@ $(document).ready(function() {
 		$(this).addClass("active");
 	});
 
+	$(".top_wrapper .top_text h1").fitText(1.5, { minFontSize: '2px', maxFontSize: '36px' });
 	$(".popup").magnificPopup({type:"image"});
 	$(".popup_content").magnificPopup({
 		type:"inline",
 		midClick: true
 	});
+
+
 
 	$(".section_header").animated("fadeInUp", "fadeOutDown");
 
@@ -57,6 +60,8 @@ $(document).ready(function() {
 		$(this).find(".podrt_descr").attr("id", "work_" + i);
 	});
 
+
+
 	$("input, select, textarea").jqBootstrapValidation();
 
 	$(".top_mnu ul a").mPageScroll2id();
@@ -71,3 +76,37 @@ $(window).load(function() {
 	$(".top_text p").animated("fadeInUp", "fadeOutDown");
 
 }); 
+
+
+(function( $ ){
+
+  $.fn.fitText = function( kompressor, options ) {
+
+    // Setup options
+    var compressor = kompressor || 1,
+        settings = $.extend({
+          'minFontSize' : Number.NEGATIVE_INFINITY,
+          'maxFontSize' : Number.POSITIVE_INFINITY
+        }, options);
+
+    return this.each(function(){
+
+      // Store the object
+      var $this = $(this);
+
+      // Resizer() resizes items based on the object width divided by the compressor * 10
+      var resizer = function () {
+        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+      };
+
+      // Call once to set.
+      resizer();
+
+      // Call on resize. Opera debounces their resize by default.
+      $(window).on('resize.fittext orientationchange.fittext', resizer);
+
+    });
+
+  };
+
+})( jQuery );

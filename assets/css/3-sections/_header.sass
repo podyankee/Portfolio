@@ -12,7 +12,9 @@ section,
 .toggle_mnu
 	+size(60px)
 	float: right
-	position: relative
+	position: fixed
+	right: 20px
+	top: 20px
 	z-index: 100
 	border: none
 	outline: none
@@ -104,3 +106,53 @@ $h: 3px
 			padding: 20px 0
 			font-size: 12px
 			text-transform: uppercase
+			outline: none
+			height: 60px
+
+			span
+				display: block
+				position: relative
+				top: -40px
+				left: 0
+				height: 100%
+				+transition(all 1s ease)
+				&:hover
+					background-color: rgba(255,255,255,.08)
+
+.top_wrapper
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	
+	.top_descr
+		display: table-row
+
+		.top_centered
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+	.top_text
+		display: inline-block
+
+		p
+			margin: 0
+			text-transform: uppercase
+			color: $bg_light
+			+kerning(5)
+
+		h1
+			display: block
+			padding: 10px 35px
+			color: #fff
+			border: 8px solid  #fff
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 14px
+			background-color: rgba(0,0,0,.4)
+			box-shadow: rgba(0,0,0,.3) 0 0 0 1000px
+			margin-left: 20px
+			margin-right: 20px
