@@ -18,7 +18,8 @@ $(document).ready(function() {
 
 
 
-	$(".section_header").animated("fadeInUp", "fadeOutDown");
+	$(".top_text h1, .section_header").animated("fadeInDown", "fadeOutUp");
+	$(".top_text p").animated("fadeInUp", "fadeOutDown");
 
 	$(".animation_1").animated("flipInY", "fadeOutDown");
 	$(".animation_2").animated("fadeInLeft", "fadeOutDown");

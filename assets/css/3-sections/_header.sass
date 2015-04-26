@@ -103,24 +103,34 @@ $h: 3px
 		margin-top: 180px
 		text-align: center
 
-		a
-			color: #fff
-			display: block
-			padding: 20px 0
-			font-size: 12px
-			text-transform: uppercase
-			outline: none
-			height: 60px
+		li
+			&:nth-child(1) a
+				+animation-duration(.5s)
+			&:nth-child(2) a
+				+animation-duration(1s)
+			&:nth-child(3) a
+				+animation-duration(1.5s)
+			&:nth-child(4) a
+				+animation-duration(2s)
 
-			span
+			a
+				color: #fff
 				display: block
-				position: relative
-				top: -40px
-				left: 0
-				height: 100%
-				+transition(all 1s ease)
-				&:hover
-					background-color: rgba(255,255,255,.08)
+				padding: 20px 0
+				font-size: 12px
+				text-transform: uppercase
+				outline: none
+				height: 60px
+
+				span
+					display: block
+					position: relative
+					top: -40px
+					left: 0
+					height: 100%
+					+transition(all 1s ease)
+					&:hover
+						background-color: rgba(255,255,255,.08)
 
 .top_wrapper
 	display: table
@@ -146,6 +156,8 @@ $h: 3px
 			text-transform: uppercase
 			color: $bg_light
 			+kerning(5)
+			+animation-delay(1.5s)
+
 
 		h1
 			display: block
@@ -159,3 +171,4 @@ $h: 3px
 			background-color: rgba(0,0,0,.1)
 			margin-left: 20px
 			margin-right: 20px
+			+animation-delay(1s)
