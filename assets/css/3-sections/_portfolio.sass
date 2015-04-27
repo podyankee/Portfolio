@@ -1,8 +1,90 @@
 .bg_dark
-  background-color: $main_color
-  color: #fff
-  .s_descr
-    &::after
-      background-color: #fff
-  a
-    color: #fff
+	background-color: $main_color
+	color: #fff
+	.s_descr
+		&::after
+			background-color: #fff
+	a
+		color: #fff
+
+.s_portfolio
+
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+		text-align: center
+
+	li
+		display: inline-block
+		margin: 0 10px
+		text-transform: uppercase
+		font-size: 12px
+		cursor: pointer
+		line-height: 2
+
+	ul
+		margin-bottom: 50px
+
+.portfolio_item
+	display: none
+	padding: 0
+
+	img
+		width: 100%
+
+.port_item_cont
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.8)
+	text-align: center
+	padding-top: 15%
+	opacity: 0
+	transition: all .5s
+	&:hover 
+		opacity: 1
+		padding-top: 20px
+	h3
+		color: #fff
+		margin-bottom: 0
+	.popup_content
+		background-color: transparent
+		display: inline-block
+		cursor: pointer
+		border: 1px solid white
+		padding: 2px 10px
+
+.podrt_descr
+	background-color: #fff
+	max-width: 500px
+	margin: auto
+
+	p,h3
+		padding: 20px
+		padding-bottom: 0
+
+	h3
+		margin-bottom: 0
+		text-align: center
+		text-transform: uppercase
+		font-weight: 400
+		margin-top: 20px
+
+	p
+		margin-top: 0
+
+	img
+		width: 100%
+		margin-top: 20px
+
+.model-box-content
+	position: relative
+
+.mfp-close
+	right: 32%
+	top: auto
+
